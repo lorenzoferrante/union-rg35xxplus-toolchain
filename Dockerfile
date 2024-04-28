@@ -51,6 +51,8 @@ COPY support .
 RUN ./build-toolchain.sh
 RUN cat ./setup-env.sh >> .bashrc
 
+RUN cd /root/workspace && git clone https://github.com/shauninman/MinUI.git
+
 VOLUME /root/workspace
 WORKDIR /root/workspace
 
